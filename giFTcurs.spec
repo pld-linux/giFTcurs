@@ -12,6 +12,7 @@ Patch1:		%{name}-no_libnsl.patch
 URL:		http://giftcurs.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gpm-devel
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,6 +30,7 @@ Klient giFT (sieci OpenFT), napisany w ncurses.
 
 %build
 rm -f missing
+%{__gettextize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
