@@ -1,0 +1,11 @@
+--- giFTcurs-0.4.3/configure.in~	Sat Jul 27 18:39:32 2002
++++ giFTcurs-0.4.3/configure.in	Sat Jul 27 18:39:32 2002
+@@ -18,7 +18,7 @@
+ 
+ dnl Checks for libraries.
+ dnl for (some) SunOS
+-AC_CHECK_LIB(nsl, gethostbyname)
++AC_CHECK_FUNC(gethostbyname, [], AC_CHECK_LIB(nsl, gethostbyname))
+ AC_CHECK_LIB(socket, socket)
+ 
+ dnl Checks for header files.
