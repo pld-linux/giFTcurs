@@ -5,8 +5,6 @@ Version:	0.3.0.cvs20020206
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Group(de):	Applikationen/Kommunikation
-Group(pl):	Aplikacje/Komunikacja
 Source0:	http://prdownloads.sourceforge.net/giftcurs/%{name}-%{version}.tar.gz
 URL:		http://giftcurs.sourceforge.net/
 BuildRequires:	automake
