@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/giftcurs/%{name}-%{version}.tar.gz
+# Source0-md5:	3c06683cdfbc82aa8a1217a913165e27
 Patch0:		%{name}-acinclude.m4_fix.patch
 Patch1:		%{name}-no_libnsl.patch
 URL:		http://giftcurs.sourceforge.net/
