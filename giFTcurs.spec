@@ -7,8 +7,6 @@ License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/giftcurs/%{name}-%{version}.tar.gz
 # Source0-md5:	b9a30012f1083a99d5f34d384fa5ea0d
-Patch0:		%{name}-acinclude.m4_fix.patch
-Patch1:		%{name}-no_libnsl.patch
 URL:		http://giftcurs.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -25,8 +23,6 @@ Klient giFT (sieci OpenFT), napisany w ncurses.
 
 %prep
 %setup -q
-#%patch0 -p1
-#%patch1 -p1
 
 %build
 rm -f missing
@@ -40,7 +36,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
