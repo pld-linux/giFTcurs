@@ -25,7 +25,7 @@ Klient sieci FastTrack
 %build
 automake --add-missing
 autoconf
-%configure 
+%configure
 %{__make}
 
 %install
