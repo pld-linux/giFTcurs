@@ -28,7 +28,7 @@ Klient giFT (sieci OpenFT), napisany w ncurses.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
