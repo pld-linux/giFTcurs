@@ -1,0 +1,32 @@
+diff -Nru giFTcurs-0.5.7.orig/src/settings.c giFTcurs-0.5.7/src/settings.c
+--- giFTcurs-0.5.7.orig/src/settings.c	2003-03-11 22:47:42.000000000 +0100
++++ giFTcurs-0.5.7/src/settings.c	2003-11-11 14:23:24.000000000 +0100
+@@ -235,8 +235,9 @@
+ 
+ static char *conffile_alloc(char *file)
+ {
+-	char *home = getenv("HOME");
+-
++	char *home = getenv("HOME_ETC");
++	
++	if (!home) home = getenv("HOME");
+ 	asprintf(&file, "%s/.giFT/%s", home ? home : "", file);
+ 	return file;
+ }
+diff -Nru giFTcurs-0.5.7.orig/src/wakeup.c giFTcurs-0.5.7/src/wakeup.c
+--- giFTcurs-0.5.7.orig/src/wakeup.c	2003-05-01 09:42:19.000000000 +0200
++++ giFTcurs-0.5.7/src/wakeup.c	2003-11-11 14:25:39.000000000 +0100
+@@ -291,10 +291,11 @@
+ void read_gift_config(void)
+ {
+ 	char line[256];
+-	char *file = malloc(strlen(getenv("HOME")) + strlen("/.giFT/ui/ui.conf") + 1);
++	char *home = getenv("HOME_ETC") ? getenv("HOME_ETC") : getenv("HOME");
++	char *file = malloc(strlen(home) + strlen("/.giFT/ui/ui.conf") + 1);
+ 	FILE *f;
+ 
+-	strcpy(file, getenv("HOME"));
++	strcpy(file, home);
+ 	strcat(file, "/.giFT/ui/ui.conf");
+ 	f = fopen(file, "r");
+ 	free(file);
