@@ -2,10 +2,11 @@ Summary:	ncurses-based giFT client
 Summary(pl):	Klient giFT
 Name:		giFTcurs
 Version:	0.5.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/giftcurs/%{name}-%{version}.tar.gz
+Patch0:		%{name}-home_etc.patch
 # Source0-md5:	b9a30012f1083a99d5f34d384fa5ea0d
 URL:		http://giftcurs.sourceforge.net/
 BuildRequires:	autoconf
@@ -23,6 +24,7 @@ Klient giFT (sieci OpenFT), napisany w ncurses.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
