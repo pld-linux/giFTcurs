@@ -1,29 +1,30 @@
-Summary:	ncurses-based FastTrack client
-Summary(pl):	Klient FastTrack
+Summary:	ncurses-based giFT client
+Summary(pl):	Klient giFT
 Name:		giFTcurs
-Version:	0.3.0.cvs20020206
+Version:	0.4.3
 Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://prdownloads.sourceforge.net/giftcurs/%{name}-%{version}.tar.gz
 URL:		http://giftcurs.sourceforge.net/
-BuildRequires:	automake
+#wywala "jakie¶" b³êdy przy automake
+#BuildRequires:	automake
 BuildRequires:	autoconf
-Requires:	giFT
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-'giFTcurs' ncurses client for FastTrack network
+Ncurses client for giFT (OpenFT network).
 
 %description -l pl
-Klient sieci FastTrack
+Klient giFT (sieci OpenFT), napisany w ncurses.
 
 
 %prep
-%setup -q -n giFTcurs-0.3.0
+%setup
 
 %build
-automake --add-missing
+#wywala "jakie¶" b³êdy przy automake
+#automake --add-missing
 %{__autoconf}
 %configure
 %{__make}
