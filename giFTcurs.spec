@@ -2,7 +2,7 @@ Summary:	ncurses-based giFT client
 Summary(pl):	Klient giFT
 Name:		giFTcurs
 Version:	0.5.7
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/giftcurs/%{name}-%{version}.tar.gz
