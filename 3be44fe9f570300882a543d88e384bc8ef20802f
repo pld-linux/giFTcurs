@@ -1,0 +1,5 @@
+- updated to 0.4.3
+- removed Require: giFT. giFTcurs does NOT require it.
+- removed automake from BuildRequires and from %build (caused errors).
+- changed Summary: and %description to apropriate one (giFT has nothing to do with FastTrack).
+- TODO: something is wrong with language. When build from rpm, giFTcurs doesn't display messages in Polish.
