@@ -1,5 +1,5 @@
 Summary:	ncurses-based giFT client
-Summary(pl):	Klient giFT
+Summary(pl.UTF-8):   Klient giFT
 Name:		giFTcurs
 Version:	0.5.7
 Release:	3
@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Ncurses client for giFT (OpenFT network).
 
-%description -l pl
+%description -l pl.UTF-8
 Klient giFT (sieci OpenFT), napisany w ncurses.
 
 %prep
