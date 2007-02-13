@@ -1,5 +1,5 @@
 Summary:	ncurses-based giFT client
-Summary(pl.UTF-8):   Klient giFT
+Summary(pl.UTF-8):	Klient giFT
 Name:		giFTcurs
 Version:	0.5.7
 Release:	3
