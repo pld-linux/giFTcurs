@@ -24,7 +24,7 @@ Klient giFT (sieci OpenFT), napisany w ncurses.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 rm -f missing
